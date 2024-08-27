@@ -1,0 +1,92 @@
+<launch>
+    <!-- Group for YDLIDAR 1 -->
+    <group ns="lidar1">
+      <node name="ydlidar_lidar_publisher" pkg="ydlidar_ros_driver" type="ydlidar_ros_driver_node" output="screen" respawn="false">
+        <param name="port" type="string" value="/dev/ydlidar1"/>
+        <param name="frame_id" type="string" value="laser_frame_1"/>
+        <param name="ignore_array" type="string" value=""/>
+        <param name="baudrate" type="int" value="512000"/>
+        <param name="lidar_type" type="int" value="1"/>
+        <param name="device_type" type="int" value="0"/>
+        <param name="sample_rate" type="int" value="18"/>
+        <param name="abnormal_check_count" type="int" value="4"/>
+        <param name="resolution_fixed" type="bool" value="true"/>
+        <param name="auto_reconnect" type="bool" value="true"/>
+        <param name="reversion" type="bool" value="true"/>
+        <param name="inverted" type="bool" value="true"/>
+        <param name="isSingleChannel" type="bool" value="false"/>
+        <param name="intensity" type="bool" value="false"/>
+        <param name="support_motor_dtr" type="bool" value="false"/>
+        <param name="invalid_range_is_inf" type="bool" value="false"/>
+        <param name="point_cloud_preservative" type="bool" value="false"/>
+        <param name="angle_min" type="double" value="-180"/>
+        <param name="angle_max" type="double" value="180"/>
+        <param name="range_min" type="double" value="0.1"/>
+        <param name="range_max" type="double" value="25.0"/>
+        <param name="frequency" type="double" value="10.0"/>
+      </node>
+      <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser1"
+        args="0.0 0.0 0.2 0.0 0.0 0.0 /base_footprint /laser_frame_1 40" />
+    </group>
+  
+    <!-- Group for YDLIDAR 2 -->
+    <group ns="lidar2">
+      <node name="ydlidar_lidar_publisher" pkg="ydlidar_ros_driver" type="ydlidar_ros_driver_node" output="screen" respawn="false">
+        <param name="port" type="string" value="/dev/ydlidar2"/>
+        <param name="frame_id" type="string" value="laser_frame_2"/>
+        <param name="ignore_array" type="string" value=""/>
+        <param name="baudrate" type="int" value="512000"/>
+        <param name="lidar_type" type="int" value="1"/>
+        <param name="device_type" type="int" value="0"/>
+        <param name="sample_rate" type="int" value="18"/>
+        <param name="abnormal_check_count" type="int" value="4"/>
+        <param name="resolution_fixed" type="bool" value="true"/>
+        <param name="auto_reconnect" type="bool" value="true"/>
+        <param name="reversion" type="bool" value="true"/>
+        <param name="inverted" type="bool" value="true"/>
+        <param name="isSingleChannel" type="bool" value="false"/>
+        <param name="intensity" type="bool" value="false"/>
+        <param name="support_motor_dtr" type="bool" value="false"/>
+        <param name="invalid_range_is_inf" type="bool" value="false"/>
+        <param name="point_cloud_preservative" type="bool" value="false"/>
+        <param name="angle_min" type="double" value="-180"/>
+        <param name="angle_max" type="double" value="180"/>
+        <param name="range_min" type="double" value="0.1"/>
+        <param name="range_max" type="double" value="25.0"/>
+        <param name="frequency" type="double" value="10.0"/>
+      </node>
+      <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser2"
+        args="0.0 0.0 0.2 0.0 0.0 0.0 /base_footprint /laser_frame_2 40" />
+    </group>
+  
+    <!-- Group for YDLIDAR 3 -->
+    <group ns="lidar3">
+      <node name="ydlidar_lidar_publisher" pkg="ydlidar_ros_driver" type="ydlidar_ros_driver_node" output="screen" respawn="false">
+        <param name="port" type="string" value="/dev/ydlidar3"/>
+        <param name="frame_id" type="string" value="laser_frame_3"/>
+        <param name="ignore_array" type="string" value=""/>
+        <param name="baudrate" type="int" value="512000"/>
+        <param name="lidar_type" type="int" value="1"/>
+        <param name="device_type" type="int" value="0"/>
+        <param name="sample_rate" type="int" value="18"/>
+        <param name="abnormal_check_count" type="int" value="4"/>
+        <param name="resolution_fixed" type="bool" value="true"/>
+        <param name="auto_reconnect" type="bool" value="true"/>
+        <param name="reversion" type="bool" value="true"/>
+        <param name="inverted" type="bool" value="true"/>
+        <param name="isSingleChannel" type="bool" value="false"/>
+        <param name="intensity" type="bool" value="false"/>
+        <param name="support_motor_dtr" type="bool" value="false"/>
+        <param name="invalid_range_is_inf" type="bool" value="false"/>
+        <param name="point_cloud_preservative" type="bool" value="false"/>
+        <param name="angle_min" type="double" value="-180"/>
+        <param name="angle_max" type="double" value="180"/>
+        <param name="range_min" type="double" value="0.1"/>
+        <param name="range_max" type="double" value="25.0"/>
+        <param name="frequency" type="double" value="10.0"/>
+      </node>
+      <node pkg="tf" type="static_transform_publisher" name="base_link_to_laser3"
+        args="0.0 0.0 0.2 0.0 0.0 0.0 /base_footprint /laser_frame_3 40" />
+    </group>
+  </launch>
+  
