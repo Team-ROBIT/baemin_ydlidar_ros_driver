@@ -10,6 +10,23 @@ ydlidar_ros_driver depends on YDLidar-SDK library. If you have never installed Y
 1. Download or clone the [YDLIDAR/YDLidar-SDK](https://github.com/YDLIDAR/YDLidar-SDK) repository on GitHub.
 2. Compile and install the YDLidar-SDK under the ***build*** directory following `README.md` of YDLIDAR/YDLidar-SDK.
 
+
+   ```shell
+   $ cd
+   $ git clone https://github.com/YDLIDAR/YDLidar-SDK
+   $ cd YDLidar-SDK
+   $ mkdir build
+   $ cd build
+   $ cmake ..
+   $ make
+   $ sudo make install
+   ```
+
+## Baemin three YDLidar G6 launch
+```shell
+$ roslaunch ydlidar_ros_driver three_G6.launch
+```
+
 ## Clone ydlidar_ros_driver
 
 1. Clone ydlidar_ros_driver package for github : 
